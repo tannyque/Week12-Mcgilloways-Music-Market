@@ -13,12 +13,17 @@ public class GuitarTest {
 
     @Before
     public void setUp() throws Exception {
-        guitar = new Guitar("Stratocaster", "Rosewood", InstrumentType.GUITAR, "Candy Apple Red", 10);
+        guitar = new Guitar("Fender", "Stratocaster","Rosewood", InstrumentType.GUITAR, "Candy Apple Red", 10);
     }
 
     @Test
     public void hasBrand() {
-        assertEquals("Stratocaster", guitar.getBrand());
+        assertEquals("Fender", guitar.getBrand());
+    }
+
+    @Test
+    public void hasModel() {
+        assertEquals("Stratocaster", guitar.getModel());
     }
 
     @Test
