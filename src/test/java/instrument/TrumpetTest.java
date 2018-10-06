@@ -45,4 +45,9 @@ public class TrumpetTest {
     public void hasNumberOfValves() {
         assertEquals(3, trumpet.getNumberOfValves());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Pah-pa-rah", trumpet.play());
+    }
 }

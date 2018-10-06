@@ -50,4 +50,9 @@ public class SaxophoneTest {
     public void hasFamily() {
         assertEquals("Tenor", saxophone.getFamily());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Buhoomu-hooooom", saxophone.play());
+    }
 }

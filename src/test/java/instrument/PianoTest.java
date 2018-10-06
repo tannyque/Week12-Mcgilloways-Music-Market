@@ -50,4 +50,9 @@ public class PianoTest {
     public void hasKeys() {
         assertEquals(88, piano.getKeys());
     }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Dooooon", piano.play());
+    }
 }

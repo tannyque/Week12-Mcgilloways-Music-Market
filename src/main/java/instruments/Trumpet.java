@@ -12,4 +12,9 @@ public class Trumpet extends Instrument {
     public int getNumberOfValves() {
         return numberOfValves;
     }
+
+    @Override
+    public String play() {
+        return "Pah-pa-rah";
+    }
 }

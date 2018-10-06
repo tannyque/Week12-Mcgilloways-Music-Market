@@ -18,4 +18,9 @@ public class Saxophone extends Instrument {
     public String getFamily() {
         return family;
     }
+
+    @Override
+    public String play() {
+        return "Buhoomu-hooooom";
+    }
 }
