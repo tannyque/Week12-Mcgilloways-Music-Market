@@ -3,12 +3,14 @@ package instruments;
 public abstract class Instrument {
 
     private String brand;
+    private String model;
     private String material;
     private InstrumentType type;
     private String colour;
 
-    public Instrument(String brand, String material, InstrumentType type, String colour) {
+    public Instrument(String brand, String model, String material, InstrumentType type, String colour) {
         this.brand = brand;
+        this.model = model;
         this.material = material;
         this.type = type;
         this.colour = colour;
@@ -16,6 +18,10 @@ public abstract class Instrument {
 
     public String getBrand() {
         return brand;
+    }
+
+    public String getModel() {
+        return model;
     }
 
     public String getMaterial() {
