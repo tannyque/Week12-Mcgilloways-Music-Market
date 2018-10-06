@@ -13,12 +13,17 @@ public class TrumpetTest {
 
     @Before
     public void setUp() throws Exception {
-        trumpet = new Trumpet("Bach", "Brass", InstrumentType.BRASS, "Gold", 3);
+        trumpet = new Trumpet("Bach", "Mariachi", "Brass", InstrumentType.BRASS, "Gold", 3);
     }
     
     @Test
     public void hasBrand() {
         assertEquals("Bach", trumpet.getBrand());
+    }
+
+    @Test
+    public void hasModel() {
+        assertEquals("Mariachi", trumpet.getModel());
     }
 
     @Test
