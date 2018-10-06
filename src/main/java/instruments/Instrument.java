@@ -22,8 +22,8 @@ public abstract class Instrument {
         return material;
     }
 
-    public InstrumentType getType() {
-        return type;
+    public String getType() {
+        return type.getType();
     }
 
     public String getColour() {
