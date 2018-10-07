@@ -13,7 +13,7 @@ public class PianoTest {
 
     @Before
     public void setUp() throws Exception {
-        piano = new Piano("Steinway", "D-274", "Wood", InstrumentType.KEYBOARD, "Black", 3, 88);
+        piano = new Piano("Steinway", "D-274", "Wood", InstrumentType.KEYBOARD, "Black", 300000.0,319999.0,3,88);
     }
 
     @Test
@@ -39,6 +39,21 @@ public class PianoTest {
     @Test
     public void hasColour() {
         assertEquals("Black", piano.getColour());
+    }
+
+    @Test
+    public void hasPurchasePrice() {
+        assertEquals(300000.0, piano.getPurchasePrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(319999.0, piano.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(19999, piano.calculateMarkup(), 0.01);
     }
 
     @Test
