@@ -13,7 +13,7 @@ public class GuitarTest {
 
     @Before
     public void setUp() throws Exception {
-        guitar = new Guitar("Fender", "Stratocaster","Rosewood", InstrumentType.GUITAR, "Candy Apple Red", 10);
+        guitar = new Guitar("Fender", "Stratocaster","Rosewood", InstrumentType.GUITAR, "Candy Apple Red", 1639.0, 1999.0, 10);
     }
 
     @Test
@@ -39,6 +39,21 @@ public class GuitarTest {
     @Test
     public void hasColour() {
         assertEquals("Candy Apple Red", guitar.getColour());
+    }
+
+    @Test
+    public void hasPurchasePrice() {
+        assertEquals(1639, guitar.getPurchasePrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(1999, guitar.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(360, guitar.calculateMarkup(), 0.01);
     }
 
     @Test

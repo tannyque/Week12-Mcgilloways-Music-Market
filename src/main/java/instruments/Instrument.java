@@ -1,6 +1,9 @@
 package instruments;
 
-public abstract class Instrument implements IPlay {
+import behaviours.IPlay;
+import shop.Stock;
+
+public abstract class Instrument extends Stock implements IPlay {
 
     private String brand;
     private String model;
@@ -8,7 +11,8 @@ public abstract class Instrument implements IPlay {
     private InstrumentType type;
     private String colour;
 
-    public Instrument(String brand, String model, String material, InstrumentType type, String colour) {
+    public Instrument(String brand, String model, String material, InstrumentType type, String colour, Double purchasePrice, Double sellingPrice) {
+        super(purchasePrice, sellingPrice);
         this.brand = brand;
         this.model = model;
         this.material = material;
