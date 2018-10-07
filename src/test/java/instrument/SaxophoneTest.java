@@ -13,7 +13,7 @@ public class SaxophoneTest {
 
     @Before
     public void setUp() throws Exception {
-        saxophone = new Saxophone("Selmer", "Series III", "Brass", InstrumentType.WOODWIND,"Gold", 23, "Tenor");
+        saxophone = new Saxophone("Selmer", "Series III", "Brass", InstrumentType.WOODWIND,"Gold", 3500.00,4500.00, 23, "Tenor");
     }
 
     @Test
@@ -39,6 +39,21 @@ public class SaxophoneTest {
     @Test
     public void hasColour() {
         assertEquals("Gold", saxophone.getColour());
+    }
+
+    @Test
+    public void hasPurchasePrice() {
+        assertEquals(3500.00, saxophone.getPurchasePrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(4500.00, saxophone.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(1000, saxophone.calculateMarkup(), 0.01);
     }
 
     @Test
